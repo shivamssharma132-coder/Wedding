@@ -205,7 +205,11 @@ h1,h2,h3,h4{
   transition:opacity 1s var(--ease), visibility 1s var(--ease);
 }
 #preloader.done{ opacity:0; visibility:hidden; pointer-events:none; }
-#preloader .crest{ width:120px; height:120px; color:var(--gold); }
+#preloader .preload-logo{
+  width:120px;
+  height:160px;
+  object-fit:contain;
+}
 #preloader .crest-ring{ stroke-dasharray:300; stroke-dashoffset:300; animation:drawRing 1.6s var(--ease) forwards 0.2s; }
 #preloader .crest-letters{ stroke-dasharray:220; stroke-dashoffset:220; animation:drawRing 1.4s var(--ease) forwards 0.9s; }
 @keyframes drawRing{ to{ stroke-dashoffset:0; } }
