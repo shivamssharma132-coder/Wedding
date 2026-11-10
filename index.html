@@ -534,6 +534,14 @@ h1,h2,h3,h4{
 #venue{ background:var(--ivory); padding-top:0; }
 .venue-hero{ position:relative; height:62vh; min-height:380px; margin-bottom:60px; overflow:hidden; }
 .venue-hero .ph{ height:100%; }
+.venue-hero .ph img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:1;
+}
 .venue-hero-caption{
   position:absolute; left:0; right:0; bottom:0; padding:34px var(--gutter);
   background:linear-gradient(0deg, rgba(20,12,10,0.6), transparent);
@@ -1123,7 +1131,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 <!-- ================= VENUE ================= -->
 <section id="venue" class="section-pad">
   <div class="venue-hero reveal-scale">
-    <div class="ph ph--dark"><div class="ph-mark"><svg width="34" height="34" aria-hidden="true"><use href="#i-pin"></use></svg><small>Heritage Estate Photo Placeholder</small></div></div>
+    <div class="ph ph--dark"><img src="Itachuna Banner.JPG" alt="Itachuna Rajbari"></div>
     <div class="venue-hero-caption">
       <h2>Itachuna Rajbari</h2>
       <span class="eyebrow" style="color:var(--gold)">A 17th-Century Heritage Estate</span>
