@@ -7,7 +7,7 @@
 <meta name="description" content="The wedding of Gargi and Shivam. December 12, 2026. Itachuna Rajbari, West Bengal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=Pinyon+Script&family=Allura&display=swap" rel="stylesheet">
 <link rel="icon" href="data:,">
 <style>
 
@@ -347,11 +347,17 @@ h1,h2,h3,h4{
   opacity:0; animation:heroUp .9s var(--ease) forwards 1.5s;
 }
 .hero-names{
-  font-family:'Pinyon Script', cursive; font-weight:400; line-height:1.1;
-  font-size:clamp(3.6rem, 11vw, 8.5rem);
-  display:flex; align-items:center; gap:clamp(14px,3vw,34px); flex-wrap:wrap; justify-content:center;
+  font-family:'Allura', cursive;
+  font-weight:400;
+  line-height:1.2;
+  font-size:clamp(3.4rem, 9vw, 7rem);
+  display:flex;
+  align-items:center;
+  gap:clamp(14px,3vw,34px);
+  flex-wrap:wrap;
+  justify-content:center;
 }
-.hero-names .frag{ overflow:hidden; }
+.hero-names .frag{ overflow:visible; }
 .hero-names .frag span{ display:inline-block; color:var(--gold); opacity:0; transform:translateY(110%); animation:heroUp .9s var(--ease) forwards; }
 .hero-names .n1 span{ animation-delay:1.7s; }
 .hero-names .amp{ font-style:italic; color:var(--gold); opacity:0; animation:heroFade 1s var(--ease) forwards 2.1s; font-size:0.62em; }
