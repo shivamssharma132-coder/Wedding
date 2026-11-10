@@ -440,6 +440,12 @@ h1,h2,h3,h4{
   display:flex; flex-direction:column; gap:18px;
 }
 .timeline-card .ph{ aspect-ratio:4/5; }
+.timeline-card .story-photo{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+}
 .timeline-index{
   font-family:var(--serif); font-style:italic; font-size:2.4rem; color:var(--gold);
   line-height:1;
@@ -924,7 +930,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
       <div class="timeline-track" id="timelineTrack">
 
         <article class="timeline-card">
-          <div class="ph"><div class="ph-mark"><svg width="30" height="30" aria-hidden="true"><use href="#i-leaf"></use></svg><small>Photo Placeholder</small></div></div>
+          <img class="story-photo" src="Our%20Story%201.jpg" alt="Gargi and Shivam at their first meeting">
           <span class="timeline-index">01</span>
           <h3>A Chance Encounter</h3>
           <span class="timeline-date">Summer of 2022</span>
