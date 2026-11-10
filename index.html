@@ -895,11 +895,12 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     <a href="#story">Our Story</a>
     <a href="#events">Events</a>
     <a href="#venue">Venue</a>
-    <a href="#travel">Travel</a>
+    <a href="#dresscode">Style Guide</a>
+    <a href="#couple">About Us</a>
     <a href="#gallery">Gallery</a>
     <a href="#faq">FAQ</a>
   </nav>
-  <a href="#rsvp" class="nav-rsvp">RSVP</a>
+  <!-- <a href="#rsvp" class="nav-rsvp">RSVP</a> -->
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
     <span></span><span></span><span></span>
   </button>
@@ -910,11 +911,12 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   <a href="#story">Our Story</a>
   <a href="#events">Events</a>
   <a href="#venue">Venue</a>
-  <a href="#travel">Travel</a>
+  <a href="#dresscode">Style Guide</a>
+  <a href="#couple">About Us</a>
   <a href="#gallery">Gallery</a>
-  <a href="#rsvp">RSVP</a>
+  <!-- <a href="#rsvp">RSVP</a> -->
   <a href="#faq">FAQ</a>
-  <a href="#rsvp" class="nav-rsvp">Reserve Your Seat</a>
+  <!-- <a href="#rsvp" class="nav-rsvp">Reserve Your Seat</a> -->
 </nav>
 
 <main id="top">
@@ -1158,8 +1160,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <span class="eyebrow">The Setting</span>
         <h2 class="section-title" style="margin:14px 0 20px; font-size:clamp(2rem,4vw,2.8rem);">Where heritage <em>meets celebration</em></h2>
         <p>A timeless heritage mansion steeped in Bengal's royal charm, Itachuna Rajbari offers a glimpse into a bygone era of grandeur. With its magnificent architecture, sprawling courtyards and old-world elegance, it sets the perfect stage for a celebration where tradition meets timeless romance.</p>
-        <p>Guests are welcomed into a world of carved colonnades, candlelit courtyards and quiet gardens — a setting that needs very little decoration to feel cinematic.</p>
-
+        
         <div class="venue-highlights">
           <div class="venue-highlight">
             <svg aria-hidden="true"><use href="#i-leaf"></use></svg>
@@ -1197,31 +1198,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   </div>
 </section>
 
-<!-- ================= TRAVEL ================= --
-<section id="travel" class="section-pad" style="background:var(--beige);">
-  <div class="container">
-    <div class="story-head reveal">
-      <span class="eyebrow">Getting There</span>
-      <h2 class="section-title">Planning your <em>journey</em></h2>
-      <p class="section-lede">A short guide for friends and family travelling from out of town.</p>
-    </div>
-    <div class="venue-highlights reveal" style="max-width:760px; margin:0 auto;">
-      <div class="venue-highlight">
-        <svg aria-hidden="true"><use href="#i-pin"></use></svg>
-        <div><h4>Nearest Airport</h4><p>Netaji Subhas Chandra Bose International Airport, Kolkata (CCU) — approximately 2.5 hours by road.</p></div>
-      </div>
-      <div class="venue-highlight">
-        <svg aria-hidden="true"><use href="#i-car"></use></svg>
-        <div><h4>By Road</h4><p>Shared shuttles will run from select pick-up points in Kolkata on each event day — details to follow closer to the date.</p></div>
-      </div>
-      <div class="venue-highlight">
-        <svg aria-hidden="true"><use href="#i-bed"></use></svg>
-        <div><h4>Where to Stay</h4><p>Limited heritage rooms on-site; nearby partner hotels available for additional guests — see RSVP form for accommodation requests.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
--->
+
 <!-- ================= DRESS CODE ================= -->
 <section id="dresscode" class="section-pad">
   <div class="container">
@@ -1330,7 +1307,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 </div>
 
 <!-- ================= RSVP ================= -->
-<section id="rsvp" class="section-pad">
+<!-- <section id="rsvp" class="section-pad">
   <div class="container rsvp-wrap">
     <div class="rsvp-intro reveal">
       <span class="eyebrow">Kindly Respond</span>
@@ -1354,7 +1331,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 
         2) Google Sheets — deploy a Google Apps Script Web App bound to a Sheet, then
            fetch(SCRIPT_URL, { method:'POST', body: new FormData(form) }) inside handleRsvpSubmit.
-      -->
+      --
       <div class="field">
         <label for="f-name">Full Name *</label>
         <input type="text" id="f-name" name="name" placeholder="Your full name" required>
@@ -1424,7 +1401,9 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     </form>
   </div>
 </section>
+-->
 
+   
 <!-- ================= LOVE NOTES ================= -->
 <section id="lovenotes" class="section-pad">
   <div class="container">
@@ -1470,21 +1449,21 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <button class="faq-q" aria-expanded="false"><h4>What should I wear?</h4><span class="faq-icon" aria-hidden="true"></span></button>
         <div class="faq-a"><p>Each event has a suggested colour palette in the Dress Code section above — Indian formal is recommended throughout, but comfort always comes first.</p></div>
       </div>
-      <div class="faq-item">
+      <!-- <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><h4>Can I bring a plus one?</h4><span class="faq-icon" aria-hidden="true"></span></button>
         <div class="faq-a"><p>Our venue has limited capacity, so we're only able to accommodate guests named on the invitation. Thank you for understanding — please reach out if you have questions.</p></div>
-      </div>
+      </div> -->
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><h4>Is accommodation available?</h4><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>A limited number of heritage rooms are available on-site, with partner hotels nearby for additional guests. Let us know your needs via the RSVP form.</p></div>
+        <div class="faq-a"><p>A limited number of heritage rooms are available on-site, with partner hotel nearby for additional guests.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><h4>What time should I arrive?</h4><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>We recommend arriving 30 minutes before each event's start time listed in the Events section, to settle in and find your seat.</p></div>
+        <div class="faq-a"><p>We recommend arriving 30 minutes before each event's start time listed in the Events section.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><h4>Is parking available?</h4><span class="faq-icon" aria-hidden="true"></span></button>
-        <div class="faq-a"><p>Yes, on-site parking is available for self-driven guests, and shuttle service will run from designated pick-up points in Kolkata.</p></div>
+        <div class="faq-a"><p>Yes, on-site parking is available for self-driven guests.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false"><h4>Who should I contact?</h4><span class="faq-icon" aria-hidden="true"></span></button>
@@ -1520,14 +1499,14 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     <div class="contact-grid reveal">
       <div class="contact-card">
         <span class="eyebrow">Bride's Side</span>
-        <h3>The Bose Family</h3>
+        <h3>The Duuta Family</h3>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-mail"></use></svg> gargi.wedding@example.com</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-phone"></use></svg> +91 90000 00001</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-pin"></use></svg> Kolkata, West Bengal</div>
       </div>
       <div class="contact-card">
         <span class="eyebrow">Groom's Side</span>
-        <h3>The Mehra Family</h3>
+        <h3>The Sharma Family</h3>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-mail"></use></svg> shivam.wedding@example.com</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-phone"></use></svg> +91 90000 00002</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-pin"></use></svg> Kolkata, West Bengal</div>
@@ -1541,17 +1520,17 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <svg class="crest footer-crest" viewBox="0 0 100 100" aria-hidden="true"><use href="#crest-symbol"></use></svg>
+    <img class="hero-logo" src="Home%20Logo.PNG" alt="">
     <div class="footer-names">Gargi &amp; Shivam</div>
-    <div class="footer-date">12 · 12 · 2026 — Itachuna Rajbari</div>
-    <p class="footer-thanks">Thank you for being part of our journey. We can't wait to celebrate this new beginning surrounded by the people we love most.</p>
+    <div class="footer-date">12 · 12 · 2026</div>
+    <p class="footer-thanks">Thank you for being part of our journey. We can't wait to celebrate surrounded by the people we love.</p>
     <div class="footer-social">
       <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-insta"></use></svg></a>
       <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"></use></svg></a>
       <a href="#" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"></use></svg></a>
       <a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"></use></svg></a>
     </div>
-    <div class="footer-bottom">Made with love for Gargi &amp; Shivam — #ForeverInItachuna</div>
+    <div class="footer-bottom">Made with love - Gargi &amp; Shivam</div>
   </div>
 </footer>
 
