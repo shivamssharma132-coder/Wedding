@@ -369,8 +369,8 @@ h1,h2,h3,h4{
 .hero-names .frag{ overflow:visible; }
 .hero-names .frag span{ display:inline-block; color:var(--gold); opacity:0; transform:translateY(110%); animation:heroUp .9s var(--ease) forwards; }
 .hero-names .n1 span{ animation-delay:2.4s; }
-.hero-names .amp{ font-style:italic; color:var(--gold); opacity:0; animation:heroUp 0.9s var(--ease) forwards 2.5s; }
-.hero-names .amp span { animation-delay: 2.4s; }
+.hero-names .amp{ font-style:italic; color:var(--gold); opacity:0; animation:heroUp 0.9s var(--ease) forwards 2.4s; }
+.hero-names .amp span { display: inline-block; opacity: 0; transform: translateY(110%); animation: heroUp 0.9s var(--ease) forwards 2.5s; }
 .hero-names .n2 span{ animation-delay:2.4s; }
 @keyframes heroUp{ to{ opacity:1; transform:translateY(0); } }
 @keyframes heroFade{ to{ opacity:1; } }
@@ -764,7 +764,12 @@ h1,h2,h3,h4{
 
 /* ============================== FOOTER ============================== */
 footer{ background:var(--ink); color:var(--beige); padding:80px 0 30px; text-align:center; }
-.footer-crest{ width:54px; height:54px; color:var(--gold); margin:0 auto 22px; }
+.footer-logo {
+  display: block;
+  width: 130px;
+  height: auto;
+  margin: 0 auto 22px;
+}
 footer .footer-names{ font-family:var(--serif); font-size:clamp(2rem,5vw,3.2rem); color:var(--ivory); margin-bottom:10px; }
 footer .footer-date{ font-size:12px; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:26px; }
 footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; line-height:1.8; color:var(--beige); }
@@ -1500,7 +1505,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     <div class="contact-grid reveal">
       <div class="contact-card">
         <span class="eyebrow">Bride's Side</span>
-        <h3>The Duuta Family</h3>
+        <h3>The Dutta Family</h3>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-mail"></use></svg> gargi.wedding@example.com</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-phone"></use></svg> +91 90000 00001</div>
         <div class="contact-row"><svg aria-hidden="true"><use href="#i-pin"></use></svg> Kolkata, West Bengal</div>
@@ -1521,7 +1526,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="container">
-    <img class="hero-logo" src="Home%20Logo.PNG" alt="">
+    <img class="footer-logo" src="Home%20Logo.PNG" alt="">
     <div class="footer-names">Gargi &amp; Shivam</div>
     <div class="footer-date">12 · 12 · 2026</div>
     <p class="footer-thanks">Thank you for being part of our journey. We can't wait to celebrate surrounded by the people we love.</p>
