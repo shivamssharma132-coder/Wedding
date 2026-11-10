@@ -252,7 +252,11 @@ h1,h2,h3,h4{
   display:flex; align-items:center; gap:10px;
   font-family:var(--serif); font-size:1.05rem; letter-spacing:0.08em;
 }
-.nav-mark .crest{ width:30px; height:30px; }
+.nav-mark .nav-logo{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+}
 .nav-links{
   display:flex; align-items:center; gap:clamp(16px,2vw,34px);
 }
@@ -331,9 +335,11 @@ h1,h2,h3,h4{
 }
 
 .hero-inner{ position:relative; z-index:2; padding:0 24px; display:flex; flex-direction:column; align-items:center; gap:26px; }
-.hero-crest{ width:64px; height:64px; color:var(--gold); opacity:0.9; }
-.hero-crest .crest-ring{ stroke-dasharray:300; stroke-dashoffset:300; animation:drawRing 2s var(--ease) forwards .3s; }
-.hero-crest .crest-letters{ stroke-dasharray:220; stroke-dashoffset:220; animation:drawRing 1.6s var(--ease) forwards 1.1s; }
+.hero-logo{
+  width:100px;
+  height:150px;
+  object-fit:contain;
+}
 
 .hero-eyebrow{
   font-size:11px; letter-spacing:0.5em; text-transform:uppercase; color:var(--beige); font-weight:500;
@@ -831,7 +837,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 <!-- ================= NAVIGATION ================= -->
 <header id="site-nav">
   <a href="#hero" class="nav-mark">
-    <svg class="crest" viewBox="0 0 100 100" aria-hidden="true"><use href="#crest-symbol"></use></svg>
+    <img class="nav-logo" src="Golden%20Logo.PNG" alt="">
     <span>Gargi &amp; Shivam</span>
   </a>
   <nav class="nav-links" aria-label="Primary">
@@ -870,7 +876,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
 
   <div class="hero-inner">
-    <svg class="crest hero-crest" viewBox="0 0 100 100" aria-hidden="true"><use href="#crest-symbol"></use></svg>
+    <img class="hero-logo" src="Golden%20Logo.PNG" alt="">
     <p class="hero-eyebrow"></p>
     <h1 class="hero-names">
       <span class="frag n1"><span>Gargi</span></span>
