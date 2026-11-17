@@ -611,18 +611,19 @@ h1,h2,h3,h4{
 /* ============================== BRIDE & GROOM ============================== */
 #couple{ background:var(--ivory); padding:0; }
 .couple-split{ display:grid; grid-template-columns:1fr 1fr; min-height:780px; position:relative; }
-.couple-side{ position:relative; display:flex; align-items:flex-end; padding:60px; color:var(--ivory); overflow:hidden; }
-.couple-side .ph{ position:absolute; inset:0; align-items:flex-start; padding-top:13%; }
+.couple-side{ position:relative; display:flex; align-items:flex-end; padding:60px; color:var(--ivory); overflow:hidden; isolation: isolate; min-height: 780px; }
+.couple-side .ph{ position:absolute; inset:0; z-index: 0; padding: 0; background-size: cover; background-position: center 20%; }
 .couple-side .ph img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
 }
-.couple-side::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,14,12,0.78), rgba(20,14,12,0.05) 55%); }
-.couple-side--groom::after{ background:linear-gradient(0deg, rgba(20,16,10,0.8), rgba(20,16,10,0.05) 55%); }
-.couple-content{ position:relative; z-index:1; max-width:420px; }
+.couple-side::after{ content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(16,10,10,0.92) 0%, rgba(16,10,10,0.68) 45%); rgba(16, 10, 10, 0.28) 100% }
+.couple-side--groom::after{ background:linear-gradient(to top, rgba(16, 10, 10, 0.92) 0%, rgba(16, 10, 10, 0.68) 45%, rgba(16, 10, 10, 0.28) 100%; }
+.couple-content{ position:relative; z-index:2; max-width:420px; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55); }
 .couple-content .eyebrow{ color:var(--gold); }
 .couple-content h3{ font-size:clamp(2.6rem,4.6vw,3.6rem); color:var(--ivory); margin:10px 0 18px; }
 .couple-content p{ color:var(--beige); font-size:0.94rem; line-height:1.85; margin:0 0 18px; }
@@ -826,7 +827,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   .hamburger{ display:flex; }
   .venue-grid{ grid-template-columns:1fr; gap:40px; }
   .couple-split{ grid-template-columns:1fr; min-height:auto; }
-  .couple-side{ min-height:560px; }
+  .couple-side{ min-height:680px; }
   .couple-center-amp{ top:0; transform:translate(-50%,-50%); }
   .rsvp-wrap{ grid-template-columns:1fr; gap:50px; }
   .contact-grid{ grid-template-columns:1fr; }
@@ -1160,7 +1161,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
             <div class="event-details">
               <div class="event-meta-row"><b>Date</b><span>20 December 2026</span></div>
               <div class="event-meta-row"><b>Time</b><span>7:00 PM Onwards</span></div>
-              <div class="event-meta-row"><b>Venue</b><span>the Grandreams Banquet, Mayapuri, New Delhi</span></div>
+              <div class="event-meta-row"><b>Venue</b><span>The Grandreams Banquet, Mayapuri, New Delhi</span></div>
               <!-- <div class="event-meta-row"><b>Dress Code</b><span>Evening Formal</span></div> -->
               <p class="event-desc">The celebrations call for one last grand gathering — an evening of dazzling moments, heartfelt toasts, infectious music and a dance floor that refuses to empty.</p>
             </div>
@@ -1276,7 +1277,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <p><strong>Embrace the old-world charm of Bengal and the grandeur of the Rajbari!</strong></p>
       </div>
       <div class="mood-card">
-        <div class="ph ph--moss"><img src="Reception Dress.PNG" alt="Reception outfits"></div>
+        <div class="ph ph--moss"><img src="Reception trial.PNG" alt="Reception outfits"></div>
         <h3>Reception</h3>
         <p class="mood-day"><strong>ELEGANT · SOPHISTICATED · GLAMOROUS</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#66735B"></span><span class="mood-swatch" style="background:#E9D7B7"></span><span class="mood-swatch" style="background:#1E1E1E"></span></div>
