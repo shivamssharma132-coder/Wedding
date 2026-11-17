@@ -747,6 +747,13 @@ h1,h2,h3,h4{
 .insta-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
 .insta-grid .ph{ aspect-ratio:1/1; position:relative; }
 .insta-grid .ph .ph-mark{ opacity:0.5; }
+.insta-grid .ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .insta-grid a{ position:relative; display:block; }
 .insta-grid a::after{
   content:'♡'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
@@ -1502,7 +1509,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     <span class="eyebrow reveal" style="justify-content:center;">Share the Moment</span>
     <p class="insta-hashtag reveal">#ForeverInItachuna</p>
     <div class="insta-grid reveal" id="instaGrid">
-      <a href="https://www.instagram.com/p/Dc-E8j7kn4o/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA=="><div class="ph"><div class="ph-mark"><svg width="18" height="18" aria-hidden="true"><use href="#i-insta"></use></svg></div></div></a>
+      <a href="https://www.instagram.com/p/Dc-E8j7kn4o/?utm_source=ig_web_copy_link&cplk=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram post"><div class="ph"><img src="Instagram 1.jpg" alt="Insta 1"></div></a>
       <a href="#"><div class="ph ph--moss"><div class="ph-mark"><svg width="18" height="18" aria-hidden="true"><use href="#i-insta"></use></svg></div></div></a>
       <a href="#"><div class="ph ph--dark"><div class="ph-mark"><svg width="18" height="18" aria-hidden="true"><use href="#i-insta"></use></svg></div></div></a>
       <a href="#"><div class="ph"><div class="ph-mark"><svg width="18" height="18" aria-hidden="true"><use href="#i-insta"></use></svg></div></div></a>
