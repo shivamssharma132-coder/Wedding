@@ -593,7 +593,15 @@ h1,h2,h3,h4{
 #dresscode{ background:var(--beige); }
 .mood-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
 .mood-card{ display:flex; flex-direction:column; gap:14px; }
-.mood-card .ph{ aspect-ratio:3/4; }
+.mood-card .ph{ aspect-ratio:3/4; position: relative; overflow: hidden; }
+.mood-card .ph img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .mood-card h3{ font-size:1.4rem; }
 .mood-card .mood-day{ font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--moss); font-weight:600; }
 .mood-palette{ display:flex; gap:6px; }
@@ -605,6 +613,13 @@ h1,h2,h3,h4{
 .couple-split{ display:grid; grid-template-columns:1fr 1fr; min-height:780px; position:relative; }
 .couple-side{ position:relative; display:flex; align-items:flex-end; padding:60px; color:var(--ivory); overflow:hidden; }
 .couple-side .ph{ position:absolute; inset:0; align-items:flex-start; padding-top:13%; }
+.couple-side .ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .couple-side::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(20,14,12,0.78), rgba(20,14,12,0.05) 55%); }
 .couple-side--groom::after{ background:linear-gradient(0deg, rgba(20,16,10,0.8), rgba(20,16,10,0.05) 55%); }
 .couple-content{ position:relative; z-index:1; max-width:420px; }
@@ -1224,7 +1239,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 
     <div class="mood-grid reveal" id="moodGrid">
       <div class="mood-card">
-        <div class="ph ph--moss"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <div class="ph ph--moss"><img src="Mehndi Dress.PNG" alt="Mehndi and Aashirbaad outfits"></div>
         <h3>Mehendi</h3>
         <p class="mood-day"><strong>COLOURFUL · FLORAL · FESTIVE</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#E9D7B7"></span><span class="mood-swatch" style="background:#D4A017"></span><span class="mood-swatch" style="background:#66735B"></span></div>
@@ -1233,7 +1248,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <p><strong>Think bright colours, playful prints and effortless festive charm!</strong></p>      
       </div>
       <div class="mood-card">
-        <div class="ph ph--dark"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <div class="ph ph--dark"><img src="Cocktail Dress.PNG" alt="Cocktail outfits"></div>
         <h3>Cocktail</h3>
         <p class="mood-day"><strong>ELEGANT · GLAMOROUS · PARTY READY</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#1E1E1E"></span><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#E9D7B7"></span></div>
@@ -1242,7 +1257,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <p><strong>Dress to impress, dance to celebrate and sparkle through the night!</strong></p>
       </div>
       <div class="mood-card">
-        <div class="ph"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <div class="ph"><img src="Haldi Dress.PNG" alt="Haldi outfits"></div>
         <h3>Haldi</h3>
         <p class="mood-day"><strong>BEAUTIFUL · PASTEL · PRETTY</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#BFD7EA"></span><span class="mood-swatch" style="background:#E8B4B8"></span><span class="mood-swatch" style="background:#E9C857"></span></div>
@@ -1252,7 +1267,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <p><strong>Keep it light, breezy and beautifully pastel!</strong></p>
       </div>
       <div class="mood-card">
-        <div class="ph"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <div class="ph"><img src="Wedding Dress.PNG" alt="Wedding outfits"></div>
         <h3>Wedding</h3>
         <p class="mood-day"><strong>TIMELESS · TRADITIONAL · REGAL</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#C6A15B"></span><span class="mood-swatch" style="background:#E9D7B7"></span></div>
@@ -1261,7 +1276,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
         <p><strong>Embrace the old-world charm of Bengal and the grandeur of the Rajbari!</strong></p>
       </div>
       <div class="mood-card">
-        <div class="ph ph--moss"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <div class="ph ph--moss"><img src="Reception Dress.PNG" alt="Reception outfits"></div>
         <h3>Reception</h3>
         <p class="mood-day"><strong>ELEGANT · SOPHISTICATED · GLAMOROUS</strong></p>
         <div class="mood-palette"><span class="mood-swatch" style="background:#66735B"></span><span class="mood-swatch" style="background:#E9D7B7"></span><span class="mood-swatch" style="background:#1E1E1E"></span></div>
@@ -1277,7 +1292,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
 <section id="couple">
   <div class="couple-split">
     <div class="couple-side couple-side--groom reveal-fade">
-      <div class="ph ph--dark" aria-hidden="true"><div class="ph-mark"><svg width="28" height="28" aria-hidden="true"><use href="#i-leaf"></use></svg><small>Portrait Placeholder</small></div></div>
+      <div class="ph ph--dark" aria-hidden="true"><img src="Shivam About Us.jpg" alt="Groom Potrait"></div>
       <div class="couple-content">
         <span class="eyebrow">The Groom</span>
         <h3>Shivam</h3>
@@ -1290,7 +1305,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
       </div>
     </div>
     <div class="couple-side reveal-fade">
-      <div class="ph" aria-hidden="true"><div class="ph-mark"><svg width="28" height="28" aria-hidden="true"><use href="#i-leaf"></use></svg><small>Portrait Placeholder</small></div></div>
+      <div class="ph" aria-hidden="true"><img src="Gargi About Us.jpg" alt="Bride Potrait"></div>
       <div class="couple-content">
         <span class="eyebrow">The Bride</span>
         <h3>Gargi</h3>
