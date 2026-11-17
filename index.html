@@ -591,10 +591,11 @@ h1,h2,h3,h4{
 
 /* ============================== DRESS CODE ============================== */
 #dresscode{ background:var(--beige); }
-.mood-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+.mood-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .mood-card{ display:flex; flex-direction:column; gap:14px; }
 .mood-card .ph{ aspect-ratio:3/4; }
 .mood-card h3{ font-size:1.4rem; }
+.mood-card .mood-day{ font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--moss); font-weight:600; }
 .mood-palette{ display:flex; gap:6px; }
 .mood-swatch{ width:18px; height:18px; border-radius:50%; border:1px solid rgba(0,0,0,0.08); }
 .mood-card p{ font-size:0.84rem; color:var(--ink-soft); line-height:1.7; margin:0; }
@@ -1218,35 +1219,48 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
       <div class="mood-card">
         <div class="ph ph--moss"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
         <h3>Mehendi & Aashirbaad</h3>
-        <div class="mood-palette"><span class="mood-swatch" style="background:#E9E0D3"></span><span class="mood-swatch" style="background:#D4B483"></span><span class="mood-swatch" style="background:#66735B"></span></div>
-        <h3>Colourful · Floral · Festive</h3>
-        <p><strong>Women:</strong> Indo-western or Indian festive wear — shararas, ghararas, anarkalis, skirt and blouse sets, sarees, or anything colourful and floral.</p>
-        <p><strong>Men:</strong> Printed or colourful kurtas, Nehru jackets, Patiala pants, dhoti-style pants, or other fun festive Indian wear.</p>
-        <p>Think bright, happy and effortless!</p>      
-      </div>
-      <div class="mood-card">
-        <div class="ph"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
-        <h3>Haldi</h3>
-        <div class="mood-palette"><span class="mood-swatch" style="background:#D4B483"></span><span class="mood-swatch" style="background:#F8F5F0"></span><span class="mood-swatch" style="background:#E9C857"></span></div>
-        <p>Yellows and ivory — light cottons that won't mind a little turmeric.</p>
+        <p class="mood-day"><strong>COLOURFUL · FLORAL · FESTIVE</strong></p>
+        <div class="mood-palette"><span class="mood-swatch" style="background:#F8F5F0"></span><span class="mood-swatch" style="background:#D4A017"></span><span class="mood-swatch" style="background:#66735B"></span></div>
+        <p><strong>Women:</strong> Indo-western or Indian festive wear — Shararas, ghararas, anarkalis, sarees, skirt sets or colourful floral ensembles.</p>
+        <p><strong>Men:</strong> Printed kurtas, Nehru jackets, Patiala or dhoti-style pants and fun festive Indian wear.</p>
+        <p><strong>Think bright colours, playful prints and effortless festive charm!</strong></p>      
       </div>
       <div class="mood-card">
         <div class="ph ph--dark"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
         <h3>Cocktail</h3>
-        <div class="mood-palette"><span class="mood-swatch" style="background:#2A211D"></span><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#D4B483"></span></div>
-        <p>Black tie optional — jewel tones, tailored fits, statement accessories welcome.</p>
+        <p class="mood-day"><strong>ELEGANT · GLAMOROUS · PARTY READY</strong></p>
+        <div class="mood-palette"><span class="mood-swatch" style="background:#1E1E1E"></span><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#E9D7B7"></span></div>
+        <p><strong>Women:</strong> Floor-length gowns, maxi or cocktail dresses, jumpsuits, co-ords, or another elegant western outfit you can dance in.</p>
+        <p><strong>Men:</strong> Black-tie attire — Tuxedos, suits, dinner jackets, blazers or polished formal evening wear.</p>
+        <p><strong>Dress to impress, dance to celebrate and sparkle through the night!</strong></p>
+      </div>
+      <div class="mood-card">
+        <div class="ph"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
+        <h3>Haldi</h3>
+        <p class="mood-day"><strong>SOFT · PASTEL · PRETTY</strong></p>
+        <div class="mood-palette"><span class="mood-swatch" style="background:#BFD7EA"></span><span class="mood-swatch" style="background:#E8B4B8"></span><span class="mood-swatch" style="background:#E9C857"></span></div>
+        <p><strong>Colour code:</strong> Light or blush blue for the groom’s side; blush pink for the bride’s side.</p>
+        <p><strong>Women:</strong> Light, comfortable Indo-western outfits — flared skirts and blouses, shararas, kaftans, anarkalis, churidaar sets, or breezy festive wear.</p>
+        <p><strong>Men:</strong> Kurta sets, with Nehru jackets or simple festive layers if you wish.</p>
+        <p><strong>Keep it light, breezy and beautifully pastel!</strong></p>
       </div>
       <div class="mood-card">
         <div class="ph"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
         <h3>Wedding</h3>
-        <div class="mood-palette"><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#D4B483"></span><span class="mood-swatch" style="background:#F8F5F0"></span></div>
-        <p>Traditional Indian formal — rich silks, classic drapes, heirloom jewellery encouraged.</p>
+        <p class="mood-day"><strong>TIMELESS · TRADITIONAL · REGAL</strong></p>
+        <div class="mood-palette"><span class="mood-swatch" style="background:#5C1F28"></span><span class="mood-swatch" style="background:#C6A15B"></span><span class="mood-swatch" style="background:#F8F5F0"></span></div>
+        <p><strong>Women:</strong> Traditional Bengali sarees, lehengas and Devdas-inspired ensembles.</p>
+        <p><strong>Men:</strong> Kurta sets, achkans, bandhgalas or traditional Bengali zamindar-inspired attire.</p>
+        <p><strong>Embrace the old-world charm of Bengal and the grandeur of the Rajbari!</strong></p>
       </div>
       <div class="mood-card">
         <div class="ph ph--moss"><div class="ph-mark"><svg width="26" height="26" aria-hidden="true"><use href="#i-dress"></use></svg><small>Outfit Placeholder</small></div></div>
         <h3>Reception</h3>
-        <div class="mood-palette"><span class="mood-swatch" style="background:#66735B"></span><span class="mood-swatch" style="background:#D4B483"></span><span class="mood-swatch" style="background:#2A211D"></span></div>
-        <p>Evening formal — gowns, sherwanis or sharp suits in deep, elegant tones.</p>
+        <p class="mood-day"><strong>ELEGANT · SOPHISTICATED · GLAMOROUS</strong></p>
+        <div class="mood-palette"><span class="mood-swatch" style="background:#66735B"></span><span class="mood-swatch" style="background:#E9D7B7"></span><span class="mood-swatch" style="background:#1E1E1E"></span></div>
+        <p><strong>Women:</strong> Sarees, lehengas, gowns, cocktail dresses or elegant Indo-western ensembles.</p>
+        <p><strong>Men:</strong> Bandhgalas, formal suits, tuxedos, blazers or sophisticated Indo-western wear.</p>
+        <p><strong>Bring your finest evening looks. It's time to celebrate in style!</strong></p>
       </div>
     </div>
   </div>
