@@ -655,7 +655,14 @@ h1,h2,h3,h4{
 .masonry-item:nth-child(3n) .ph{ aspect-ratio:3/4; }
 .masonry-item:nth-child(3n+1) .ph{ aspect-ratio:1/1; }
 .masonry-item:nth-child(3n+2) .ph{ aspect-ratio:4/5; }
-.masonry-item .ph{ position:relative; }
+.masonry-item .ph{ position:relative; aspect-ratio: 3 / 4;}
+.masonry-item .ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .masonry-item .ph-zoom{
   position:absolute; inset:0; background:rgba(42,33,29,0); display:flex; align-items:center; justify-content:center;
   transition:.4s var(--ease); opacity:0;
@@ -671,7 +678,14 @@ h1,h2,h3,h4{
 }
 #lightbox.open{ opacity:1; visibility:visible; }
 #lightbox .lb-frame{ width:min(70vw,560px); }
-#lightbox .lb-frame .ph{ aspect-ratio:4/5; }
+#lightbox .lb-frame .ph{ aspect-ratio:3/4; position: relative;}
+#lightbox .lb-frame .ph img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 #lightbox .lb-close, #lightbox .lb-prev, #lightbox .lb-next{
   position:absolute; color:var(--ivory); width:42px; height:42px; border:1px solid rgba(248,245,240,0.4); border-radius:50%;
   display:flex; align-items:center; justify-content:center; transition:.3s var(--ease);
@@ -1845,8 +1859,18 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   var categories = ['proposal','Travel','prewedding','memories'];
   var labels = { proposal:'Before Forever', Travel:'Miles Together', prewedding:'The Prelude', memories:'Little Moments' };
   var tones = ['ph','ph ph--dark','ph ph--moss'];
-  var items = [];
-  var totalPerCat = 5;
+  var items = [
+     { category: 'proposal', index: 1, src: 'Proposal1.jpg', alt: 'Our proposal' },
+     { category: 'Travel', index: 1, src: 'Travel1.jpg', alt: 'A moment from our travels' },
+     { category: 'prewedding', index: 1, src: 'Roka1.jpg', alt: 'A pre-wedding moment' },
+     { category: 'memories', index: 1, src: 'Moment1.jpg', alt: 'A favorite memory' }
+  ];
+
+items.forEach(function(item, i) {
+  item.tone = tones[i % tones.length];
+});
+   
+var totalPerCat = 5;
   categories.forEach(function(cat){
     for(var i=1;i<=totalPerCat;i++){
       items.push({ category:cat, index:i, tone: tones[(items.length) % tones.length] });
@@ -1861,8 +1885,8 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     fig.dataset.index = idx;
     fig.innerHTML =
       '<div class="' + item.tone + '">' +
-        '<div class="ph-mark"><svg width="22" height="22" aria-hidden="true"><use href="#i-leaf"></use></svg><small>' + labels[item.category] + ' ' + item.index + '</small></div>' +
-        '<div class="ph-zoom"><svg aria-hidden="true"><use href="#i-zoom"></use></svg></div>' +
+        <img src="' + item.src + '" alt="' + item.alt + '" loading="lazy">' +
+       '<div class="ph-zoom"><svg aria-hidden="true"><use href="#i-zoom"></use></svg></div>' +
       '</div>';
     fig.addEventListener('click', function(){ openLightbox(idx); });
     grid.appendChild(fig);
@@ -1898,7 +1922,7 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
     currentIndex = idx;
     var item = items[idx];
     lbImage.className = item.tone.replace('ph','ph') + '';
-    lbImage.innerHTML = '<div class="ph-mark"><svg width="30" height="30" aria-hidden="true"><use href="#i-leaf"></use></svg><small>' + labels[item.category] + ' ' + item.index + '</small></div>';
+    lbImage.innerHTML = '<img src="' + item.src + '" alt="' + item.alt + '">';
     lbCaption.textContent = labels[item.category] + ' — Image ' + item.index;
   }
 
