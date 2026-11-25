@@ -1860,22 +1860,36 @@ footer .footer-thanks{ max-width:46ch; margin:0 auto 36px; font-size:0.92rem; li
   var labels = { proposal:'Before Forever', Travel:'Miles Together', prewedding:'The Prelude', memories:'Little Moments' };
   var tones = ['ph','ph ph--dark','ph ph--moss'];
   var items = [
-     { category: 'proposal', index: 1, src: 'Proposal1.jpg', alt: 'Our proposal' },
-     { category: 'Travel', index: 1, src: 'Travel1.jpg', alt: 'A moment from our travels' },
-     { category: 'prewedding', index: 1, src: 'Roka1.jpg', alt: 'A pre-wedding moment' },
-     { category: 'memories', index: 1, src: 'Moment1.jpg', alt: 'A favorite memory' }
+  { category: 'proposal', index: 1, src: 'Proposal1.jpg', alt: 'Proposal photo 1' },
+  { category: 'proposal', index: 2, src: 'Proposal2.jpg', alt: 'Proposal photo 2' },
+  { category: 'proposal', index: 3, src: 'Proposal3.jpg', alt: 'Proposal photo 3' },
+  { category: 'proposal', index: 4, src: 'Proposal4.jpg', alt: 'Proposal photo 4' },
+  { category: 'proposal', index: 5, src: 'Proposal5.jpg', alt: 'Proposal photo 5' },
+
+  { category: 'Travel', index: 1, src: 'Travel1.jpg', alt: 'Travel photo 1' },
+  { category: 'Travel', index: 2, src: 'Travel2.heic', alt: 'Travel photo 2' },
+  { category: 'Travel', index: 3, src: 'Travel3.jpg', alt: 'Travel photo 3' },
+  { category: 'Travel', index: 4, src: 'Travel4.heic', alt: 'Travel photo 4' },
+  { category: 'Travel', index: 5, src: 'Travel5.heic', alt: 'Travel photo 5' },
+
+  { category: 'prewedding', index: 1, src: 'Roka1.jpg', alt: 'Pre-wedding photo 1' },
+  { category: 'prewedding', index: 2, src: 'Roka2.jpg', alt: 'Pre-wedding photo 2' },
+  { category: 'prewedding', index: 3, src: 'Roka3.jpg', alt: 'Pre-wedding photo 3' },
+  { category: 'prewedding', index: 4, src: 'Roka4.jpg', alt: 'Pre-wedding photo 4' },
+  { category: 'prewedding', index: 5, src: 'Roka5.jpg', alt: 'Pre-wedding photo 5' },
+
+  { category: 'memories', index: 1, src: 'Moment1.heic', alt: 'Memory photo 1' },
+  { category: 'memories', index: 2, src: 'Moment2.heic', alt: 'Memory photo 2' },
+  { category: 'memories', index: 3, src: 'Moment3.heic', alt: 'Memory photo 3' },
+  { category: 'memories', index: 4, src: 'Moment4.jpg', alt: 'Memory photo 4' },
+  { category: 'memories', index: 5, src: 'Moment5.heic', alt: 'Memory photo 5' }
   ];
 
 items.forEach(function(item, i) {
   item.tone = tones[i % tones.length];
 });
    
-var totalPerCat = 5;
-  categories.forEach(function(cat){
-    for(var i=1;i<=totalPerCat;i++){
-      items.push({ category:cat, index:i, tone: tones[(items.length) % tones.length] });
-    }
-  });
+
 
   var grid = document.getElementById('masonryGrid');
   items.forEach(function(item, idx){
