@@ -1899,7 +1899,7 @@ items.forEach(function(item, i) {
     fig.dataset.index = idx;
     fig.innerHTML =
       '<div class="' + item.tone + '">' +
-        <img src="' + item.src + '" alt="' + item.alt + '" loading="lazy">' +
+        '<img src="' + item.src + '" alt="' + item.alt + '" loading="lazy">' +
        '<div class="ph-zoom"><svg aria-hidden="true"><use href="#i-zoom"></use></svg></div>' +
       '</div>';
     fig.addEventListener('click', function(){ openLightbox(idx); });
